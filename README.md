@@ -1,13 +1,11 @@
 
-<img align="right" src="https://cdn.rawgit.com/feross/standard/master/badge.svg">
-
-# Lisk Nano
+# Ark Nano Wallet
 
 ## Development
 
 ```
-git clone https://github.com/LiskHQ/lisk-nano.git
-cd lisk-nano
+git clone https://github.com/ArkEcosystem/ark-nano-wallet
+cd ark-nano-wallet
 npm install
 cd src
 npm run dev
@@ -57,13 +55,14 @@ npm run dist:linux
 
 ## Authors
 
-Ricardo Ferro <ricardo@lisk.io>
+- Guillaume Verbal <doweig@ark.io>
+- Ricardo Ferro <ricardo@lisk.io>
 
 ## License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Lisk
+Copyright (c) 2017 Ark
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:  
 
