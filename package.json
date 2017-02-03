@@ -1,28 +1,43 @@
 {
-  "name": "lisk-nano",
-  "version": "0.1.2",
-  "description": "Lisk Nano",
-  "homepage": "https://github.com/LiskHQ/lisk-nano",
-  "bugs": "https://github.com/LiskHQ/lisk-nano/issues",
-  "main": "main.js",
+  "name": "ark-nano-wallet",
+  "version": "0.1.0",
+  "description": "Ark Nano Wallet",
+  "homepage": "https://github.com/ArkEcosystem/ark-nano-wallet",
+  "bugs": "https://github.com/ArkEcosystem/ark-nano-wallet/issues",
   "scripts": {
     "start": "electron app",
-    "dist:win": "build --win",
-    "dist:osx": "build --osx",
+    "dist": "npm run dist:macos && npm run dist:linux && npm run dist:win32 && npm run dist:win64",
+    "dist:win64": "build --win --x64",
+    "dist:win32": "build --win --ia32",
+    "dist:macos": "build --macos",
     "dist:linux": "build --linux"
   },
+  "author": {
+    "name": "Guillaume Verbal",
+    "email": "doweig@ark.io",
+    "url": "https://github.com/doweig"
+  },
+  "contributors": [
+    {
+      "name": "Ricardo Ferro",
+      "email": "ricardo.ferro@gmail.com",
+      "url": "https://github.com/rferro"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/LiskHQ/lisk-nano"
+    "url": "https://github.com/ArkEcosystem/ark-nano-wallet"
   },
   "devDependencies": {
-    "electron": "^1.4.4",
-    "electron-builder": "^7.14.2"
+    "electron": "^1.4.15",
+    "electron-builder": "^12.3.1"
   },
   "build": {
-    "appId": "io.lisk.nano",
-    "category": "finance",
-    "productName": "Lisk Nano",
+    "appId": "io.ark.nano.wallet",
+    "mac": {
+      "category": "finance"
+    },
+    "productName": "Ark Nano",
     "win": {
       "target": "nsis"
     }
