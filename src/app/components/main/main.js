@@ -1,7 +1,7 @@
 
 import './main.less'
 
-import lisk from 'lisk-js'
+import lisk from 'arkjs'
 
 const UPDATE_INTERVAL_BALANCE = 10000
 
