@@ -50,6 +50,11 @@ app.component('transactions', {
         limit = 10
       }
 
+      // Monkey patch
+      // sometimes account binding gets delayed for some reasons
+      if (!this.account)
+        return this.timeout = this.$timeout(this.update.bind(this), 1 * 1000)
+
       return this.$peers.active.getTransactions(this.account.address, limit)
         .then(res => {
           this.transactions = res.transactions
