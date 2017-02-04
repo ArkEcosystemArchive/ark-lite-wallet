@@ -126,6 +126,7 @@ app.factory('$peer', ($http, $log, $q, $timeout) => {
         transaction = lisk.transaction.createTransaction(
           recipient,
           amount,
+          null,
           passphrase,
           secondPassphrase
         )
