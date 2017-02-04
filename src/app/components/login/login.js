@@ -178,7 +178,7 @@ app.component('login', {
     }
 
     devTestAccount () {
-      this.input_passphrase = 'stay undo beyond powder sand laptop grow gloom apology hamster primary arrive'
+      this.input_passphrase = 'insect core ritual alcohol clinic opera aisle dial entire dust symbol vintage'
       this.$timeout(this.go.bind(this), 100)
     }
 
