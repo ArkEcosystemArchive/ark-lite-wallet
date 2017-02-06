@@ -1,11 +1,11 @@
 
-# Ark Nano Wallet
+# Ark Lite Wallet
 
 ## Development
 
 ```
-git clone https://github.com/ArkEcosystem/ark-nano-wallet
-cd ark-nano-wallet
+git clone https://github.com/ArkEcosystem/ark-lite-wallet
+cd ark-lite-wallet
 npm install
 cd src
 npm run dev
