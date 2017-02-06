@@ -1,13 +1,20 @@
 md-content(layout='row')
   md-content.body-content(flex='100')
+
     md-content.header(layout='row', layout-align='center center', layout-padding)
-      img.logo(src=require('./images/logo.png'))
-      div(flex, ng-if='$ctrl.logged')
-      md-button.md-raised.md-primary.logout(ng-click='$ctrl.logout()', ng-if='$ctrl.logged') Logout
+      div(flex=33, layout='column', layout-align='center center')
+        a(href="https://github.com/ArkEcosystem/ark-lite-wallet") Inspect me on github
+      div(flex=33, layout='column', layout-align='center center')
+        img.logo(src=require('./images/logo.png'))
+      div(flex=33, layout='column', layout-align='center center')
+        md-button.md-raised.md-primary.logout(ng-click='$ctrl.logout()', ng-if='$ctrl.logged') Logout
+
     div(layout='row', layout-align='space-around', ng-show='$ctrl.prelogged')
       md-progress-circular.md-primary(md-mode='indeterminate', md-diameter='80')
+
     div(ng-show='!$ctrl.prelogged && !$ctrl.logged')
       login(passphrase='$ctrl.passphrase', on-login='$ctrl.login()')
+
     div(ng-if='$ctrl.logged', ng-class='{ online: $ctrl.$peers.online, offline: !$ctrl.$peers.online }')
       top(account='$ctrl.account')
       send(passphrase='$ctrl.passphrase', account='$ctrl.account')
