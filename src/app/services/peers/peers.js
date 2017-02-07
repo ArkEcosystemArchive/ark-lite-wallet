@@ -10,8 +10,8 @@ app.factory('$peers', ($peer, $timeout) => {
     constructor () {
       this.stack = {
         official: [
-          new $peer({ host: '127.0.0.1' }),
-        //   new $peer({ host: 'node01.lisk.io' }),
+          new $peer({ host: 'node1.arknet.cloud' }),
+          new $peer({ host: 'node2.arknet.cloud' }),
         ],
         public: [],
         testnet: [
