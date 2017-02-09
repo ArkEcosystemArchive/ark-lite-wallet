@@ -25,6 +25,8 @@ app.component('main', {
           this.$rootScope.$broadcast('peerUpdate')
         }
       })
+
+      this.clientVersion = require('../../../../package.json').version
     }
 
     reset () {
