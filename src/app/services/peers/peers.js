@@ -15,7 +15,7 @@ app.factory('$peers', ($peer, $timeout) => {
         ],
         public: [],
         testnet: [
-          new $peer({ host: 'testnet.lisk.io', port: null, ssl: true }),
+          // new $peer({ host: 'node1.arknet.cloud', port: null, ssl: true }),
         ]
       }
 
