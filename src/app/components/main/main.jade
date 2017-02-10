@@ -14,9 +14,9 @@ md-content(layout='row')
       md-progress-circular.md-primary(md-mode='indeterminate', md-diameter='80')
 
     div(ng-show='!$ctrl.prelogged && !$ctrl.logged')
-      login(passphrase='$ctrl.passphrase', on-login='$ctrl.login()')
+      login(address='$ctrl.address', on-login='$ctrl.login()')
 
     div(ng-if='$ctrl.logged', ng-class='{ online: $ctrl.$peers.online, offline: !$ctrl.$peers.online }')
       top(account='$ctrl.account')
-      send(passphrase='$ctrl.passphrase', account='$ctrl.account')
+      send(account='$ctrl.account')
       transactions(account='$ctrl.account')

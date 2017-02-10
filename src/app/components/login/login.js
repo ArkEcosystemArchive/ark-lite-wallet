@@ -1,6 +1,7 @@
 
 import crypto from 'crypto'
 import mnemonic from 'bitcore-mnemonic'
+import lisk from 'arkjs'
 
 import './login.less'
 import './save.less'
@@ -8,7 +9,7 @@ import './save.less'
 app.component('login', {
   template: require('./login.jade')(),
   bindings: {
-    passphrase: '=',
+    address: '=',
     onLogin: '&',
   },
   controller: class login {
@@ -31,6 +32,7 @@ app.component('login', {
     }
 
     reset () {
+      this.passphrase = ''
       this.input_passphrase = ''
       this.progress = 0
       this.seed = this.emptyBytes().map(v => '00')
@@ -42,8 +44,10 @@ app.component('login', {
     }
 
     go () {
-      this.passphrase = this.fix(this.input_passphrase)
-
+      let passphrase = this.fix(this.input_passphrase)
+      let kp = lisk.crypto.getKeys(passphrase)
+      this.address = lisk.crypto.getAddress(kp.publicKey)
+      
       this.reset()
       this.$timeout(this.onLogin)
     }

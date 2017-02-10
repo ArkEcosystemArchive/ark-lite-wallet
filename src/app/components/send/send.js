@@ -8,7 +8,6 @@ app.component('send', {
   template: require('./send.jade')(),
   bindings: {
     account: '<',
-    passphrase: '<',
   },
   controller: class send {
     constructor ($scope, $peers, lsk, success, error, $mdDialog, $q) {
@@ -43,7 +42,7 @@ app.component('send', {
 
     promptSecondPassphrase () {
       return this.$q((resolve, reject) => {
-        if (this.account.secondSignature) {
+        // if (this.account.secondSignature) {
           this.$mdDialog.show({
             controllerAs: '$ctrl',
             template: require('./second.jade')(),
@@ -63,9 +62,9 @@ app.component('send', {
               }
             }
           })
-        } else {
-          resolve()
-        }
+        // } else {
+        //   resolve()
+        // }
       })
     }
 
@@ -73,10 +72,10 @@ app.component('send', {
       this.loading = true
 
       this.promptSecondPassphrase()
-        .then((secondPassphrase) => {
+        .then((passphrase) => {
           this.$peers.active.sendTransaction(
-            this.passphrase,
-            secondPassphrase,
+            passphrase,
+            null,
             this.recipient.value,
             this.amount.raw
           )

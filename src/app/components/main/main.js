@@ -1,8 +1,6 @@
 
 import './main.less'
 
-import lisk from 'arkjs'
-
 const UPDATE_INTERVAL_BALANCE = 10000
 
 app.component('main', {
@@ -38,9 +36,6 @@ app.component('main', {
 
       this.$peers.setActive()
 
-      let kp = lisk.crypto.getKeys(this.passphrase)
-      this.address = lisk.crypto.getAddress(kp.publicKey)
-
       this.update()
         .then(() => {
           this.prelogged = false
@@ -63,7 +58,7 @@ app.component('main', {
       this.logged = false
       this.prelogged = false
       this.account = {}
-      this.passphrase = ''
+      this.address = ''
     }
 
     update () {
