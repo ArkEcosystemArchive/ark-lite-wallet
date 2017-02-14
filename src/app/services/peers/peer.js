@@ -143,7 +143,7 @@ app.factory('$peer', ($http, $log, $q, $timeout) => {
             port: TRANSACTION_HEADER_PORT,
           }
 
-          return this.post(API_SEND_TRANSACTION, { transaction }, headers)
+          return this.post(API_SEND_TRANSACTION, { transactions: [ transaction ] }, headers)
         })
     }
 
