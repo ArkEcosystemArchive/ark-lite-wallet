@@ -131,7 +131,7 @@ app.factory('$peer', ($http, $log, $q, $timeout) => {
           secondPassphrase
         )
       } catch (e) {
-        return $q.reject()
+        return $q.reject(e)
       }
 
       return this.getNetHash()
