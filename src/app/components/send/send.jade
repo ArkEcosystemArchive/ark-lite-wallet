@@ -4,7 +4,7 @@ md-card.offline-hide
       span.md-title Send
   md-card-content
     form(name='$ctrl.sendForm')
-      md-content(flex='100', flex-gt-sm='70', flex-offset-gt-sm='15')
+      md-content.send-form-content(flex='100', flex-gt-sm='70', flex-offset-gt-sm='15')
         md-input-container.md-block
           label Recipient Address
           input(type='text', name='recipient', ng-model='$ctrl.recipient.value', required, ng-pattern='$ctrl.recipient.regexp', ng-disabled='$ctrl.loading')
