@@ -65,6 +65,9 @@ let minify = () => {
       new webpack.optimize.UglifyJsPlugin({
         compress: {
           warnings: false,
+        },
+        mangle: {
+          except: ['Array','BigInteger','Boolean','Buffer','ECPair','Function','Number','Point']
         }
       })
     ]
