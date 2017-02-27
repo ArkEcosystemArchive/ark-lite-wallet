@@ -1,7 +1,7 @@
 
 import './main.less'
 
-const UPDATE_INTERVAL_BALANCE = 10000
+const UPDATE_INTERVAL_BALANCE = 5 * 1000 // 5 seconds
 
 app.component('main', {
   template: require('./main.jade')(),

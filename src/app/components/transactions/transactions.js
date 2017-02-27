@@ -1,7 +1,7 @@
 
 import './transactions.less'
 
-const UPDATE_INTERVAL = 20000
+const UPDATE_INTERVAL = 5 * 1000 // 5 seconds
 
 app.component('transactions', {
   template: require('./transactions.jade')(),
