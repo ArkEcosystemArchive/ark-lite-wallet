@@ -90,7 +90,13 @@ app.component('send', {
                 })
             },
             (res) => {
-              this.error.dialog({ text: res && res.message ? res.message : 'An error occurred while sending the transaction.' })
+              let errorMsg = 'An error occurred while sending the transaction.'
+              if (res && res.error)
+                errorMsg = res.error
+              else if (res && res.message)
+                errorMsg = res.message
+
+              this.error.dialog({ text: errorMsg })
             }
           )
           .finally(() => {
