@@ -7,7 +7,10 @@ md-dialog.dialog-second(aria-label='Enter the passphrase of your account')
       .md-dialog-content
         md-input-container.md-block
           label Passphrase
-          input(type='password', ng-model='$ctrl.value')
+          input(type='password', ng-model='$ctrl.passphrase')
+        md-input-container.md-block(ng-if="$ctrl.account.secondSignature")
+          label Second Passphrase
+          input(type='password', ng-model='$ctrl.secondPassphrase')
     md-dialog-actions(layout='row')
       md-button(ng-click="$ctrl.cancel()") Cancel
       span(flex)

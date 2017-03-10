@@ -42,18 +42,24 @@ app.component('send', {
 
     promptSecondPassphrase () {
       return this.$q((resolve, reject) => {
-        // if (this.account.secondSignature) {
+        const account = this.account
           this.$mdDialog.show({
             controllerAs: '$ctrl',
             template: require('./second.jade')(),
             controller: /*@ngInject*/ class second {
               constructor ($scope, $mdDialog) {
                 this.$mdDialog = $mdDialog
+                this.account = account
+                this.passphrase = ''
+                this.secondPassphrase = null
               }
 
               ok () {
                 this.$mdDialog.hide()
-                resolve(this.value)
+                resolve({
+                  passphrase: this.passphrase,
+                  secondPassphrase: this.secondPassphrase,
+                })
               }
 
               cancel () {
@@ -62,9 +68,6 @@ app.component('send', {
               }
             }
           })
-        // } else {
-        //   resolve()
-        // }
       })
     }
 
@@ -72,10 +75,10 @@ app.component('send', {
       this.loading = true
 
       this.promptSecondPassphrase()
-        .then((passphrase) => {
+        .then((inputs) => {
           this.$peers.active.sendTransaction(
-            passphrase,
-            null,
+            inputs.passphrase,
+            inputs.secondPassphrase,
             this.recipient.value,
             this.amount.raw
           )
