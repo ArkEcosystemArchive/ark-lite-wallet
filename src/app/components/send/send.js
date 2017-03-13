@@ -22,6 +22,8 @@ app.component('send', {
         regexp: ADDRESS_VALID_RE,
       }
 
+      this.smartbridge = {}
+
       this.amount = {
         regexp: AMOUNT_VALID_RE,
       }
@@ -37,6 +39,7 @@ app.component('send', {
 
     reset () {
       this.recipient.value = ''
+      this.smartbridge.value = ''
       this.amount.value = ''
     }
 
@@ -77,10 +80,11 @@ app.component('send', {
       this.promptSecondPassphrase()
         .then((inputs) => {
           this.$peers.active.sendTransaction(
-            inputs.passphrase,
-            inputs.secondPassphrase,
             this.recipient.value,
-            this.amount.raw
+            this.amount.raw,
+            this.smartbridge.value,
+            inputs.passphrase,
+            inputs.secondPassphrase
           )
           .then(
             (res) => {

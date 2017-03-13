@@ -122,14 +122,14 @@ app.factory('$peer', ($http, $log, $q, $timeout) => {
         .then(res => res.data.nethash)
     }
 
-    sendTransaction (passphrase, secondPassphrase, recipient, amount) {
+    sendTransaction (recipient, amount, smartbridge, passphrase, secondPassphrase) {
       let transaction
 
       try {
         transaction = lisk.transaction.createTransaction(
           recipient,
           amount,
-          null,
+          smartbridge,
           passphrase,
           secondPassphrase
         )
