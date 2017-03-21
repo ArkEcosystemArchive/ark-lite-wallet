@@ -1,6 +1,10 @@
 
 # Ark Lite Wallet
 
+## Self Hosted on Github
+
+https://arkecosystem.github.io/ark-lite-wallet/app
+
 ## Development
 
 ```
