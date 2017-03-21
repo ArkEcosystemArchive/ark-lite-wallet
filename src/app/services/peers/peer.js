@@ -12,12 +12,12 @@ const API_STATUS = '/api/loader/status'
 const REQUEST_TIMEOUT = 12000
 
 const TRANSACTION_HEADER_OS = 'ark-lite-wallet'
-const TRANSACTION_HEADER_PORT = '4000'
+const TRANSACTION_HEADER_PORT = '4001'
 const TRANSACTION_HEADER_VERSION = require('../../../../package.json').version
 
 app.factory('$peer', ($http, $log, $q, $timeout) => {
   return class $peer {
-    constructor ({ host, port = 4000, ssl = false }) {
+    constructor ({ host, port = 4001, ssl = false }) {
       this.host = host
       this.port = port
       this.ssl = !!ssl
