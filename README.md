@@ -1,15 +1,15 @@
 
-# Ark Lite Wallet
+# BPL Lite Wallet
 
 ## Self Hosted on Github
 
-https://arkecosystem.github.io/ark-lite-wallet/app
+https://blockpool-io.github.io/BPL-lite-wallet/app
 
 ## Development
 
 ```
-git clone https://github.com/ArkEcosystem/ark-lite-wallet
-cd ark-lite-wallet
+git clone https://github.com/blockpool-io/bpl-lite-wallet
+cd bpl-lite-wallet
 npm install
 cd src
 npm install
@@ -21,8 +21,8 @@ Open http://localhost:8080
 ## Build
 
 ```
-git clone https://github.com/ArkEcosystem/ark-lite-wallet
-cd ark-lite-wallet
+git clone https://github.com/blockpool-io/bpl-lite-wallet
+cd bpl-lite-wallet
 npm install
 cd src
 npm install
