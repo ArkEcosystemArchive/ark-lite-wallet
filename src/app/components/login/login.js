@@ -1,7 +1,7 @@
 
 import crypto from 'crypto'
 import mnemonic from 'bitcore-mnemonic'
-import lisk from 'arkjs'
+import lisk from 'bpljs'
 
 import './login.less'
 import './save.less'
@@ -47,7 +47,7 @@ app.component('login', {
       let passphrase = this.fix(this.input_passphrase)
       let kp = lisk.crypto.getKeys(passphrase)
       this.address = lisk.crypto.getAddress(kp.publicKey)
-      
+
       this.reset()
       this.$timeout(this.onLogin)
     }

@@ -1,5 +1,5 @@
 
-import lisk from 'arkjs'
+import lisk from 'bpljs'
 
 const API_PEERS = '/api/peers'
 const API_ACCOUNT = '/api/accounts'

@@ -1,7 +1,7 @@
 
 import './send.less'
 
-const ADDRESS_VALID_RE = /^[A|a][\w]{1,33}$/
+const ADDRESS_VALID_RE = /^[B][\w]{1,33}$/
 const AMOUNT_VALID_RE = '^[0-9]+(\.[0-9]{1,8})?$'
 
 app.component('send', {

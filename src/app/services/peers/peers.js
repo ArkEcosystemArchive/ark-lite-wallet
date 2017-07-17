@@ -10,8 +10,15 @@ app.factory('$peers', ($peer, $timeout) => {
     constructor () {
       this.stack = {
         official: [
-          new $peer({ host: 'node1.arknet.cloud', port: null, ssl: true }),
-          new $peer({ host: 'node2.arknet.cloud', port: null, ssl: true }),
+          new $peer({ host: '34.211.111.67', port: 4000, ssl: false }),
+          new $peer({ host: '13.59.176.127', port: 4000, ssl: false }),
+          new $peer({ host: '54.175.122.162', port: 4000, ssl: false }),
+          new $peer({ host: '13.126.40.180', port: 4000, ssl: false }),
+          new $peer({ host: '54.93.85.178', port: 4000, ssl: false }),
+          new $peer({ host: '54.246.214.229', port: 4000, ssl: false }),
+          new $peer({ host: '35.182.28.68', port: 4000, ssl: false }),
+          new $peer({ host: '54.153.35.65', port: 4000, ssl: false }),
+          new $peer({ host: '54.252.170.222', port: 4000, ssl: false })
         ],
         public: [],
         testnet: [
