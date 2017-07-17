@@ -13,7 +13,7 @@
     "bitcore-mnemonic": "^1.1.1",
     "debug": "^2.2.0",
     "jquery": "^2.2.4",
-    "arkjs": "git://github.com/ArkEcosystem/ark-js#mainnet",
+    "bpljs":"github:blockpool-io/BPL-js#testnet",
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
     "numeral": "^1.5.3"
