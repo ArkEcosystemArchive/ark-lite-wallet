@@ -9,7 +9,11 @@ app.factory('$peers', ($peer, $timeout) => {
   class $peers {
     constructor () {
       this.stack = {
-        official: [
+        official: [],
+        public: [],
+        testnet: [
+          new $peer({ host: '13.124.137.65', port: 4000, ssl: false }),
+          new $peer({ host: '52.66.184.223', port: 4000, ssl: false }),
           new $peer({ host: '34.211.111.67', port: 4000, ssl: false }),
           new $peer({ host: '13.59.176.127', port: 4000, ssl: false }),
           new $peer({ host: '54.175.122.162', port: 4000, ssl: false }),
@@ -18,11 +22,17 @@ app.factory('$peers', ($peer, $timeout) => {
           new $peer({ host: '54.246.214.229', port: 4000, ssl: false }),
           new $peer({ host: '35.182.28.68', port: 4000, ssl: false }),
           new $peer({ host: '54.153.35.65', port: 4000, ssl: false }),
-          new $peer({ host: '54.252.170.222', port: 4000, ssl: false })
-        ],
-        public: [],
-        testnet: [
-          // new $peer({ host: '127.0.0.1', port: 4000, ssl: false }),
+          new $peer({ host: '54.252.170.222', port: 4000, ssl: false }),
+          new $peer({ host: '13.124.137.65', port: 4000, ssl: false }),
+          new $peer({ host: '52.78.18.248', port: 4000, ssl: false }),
+          new $peer({ host: '54.206.6.159', port: 4000, ssl: false }),
+          new $peer({ host: '54.183.178.42', port: 4000, ssl: false }),
+          new $peer({ host: '54.241.135.25', port: 4000, ssl: false }),
+          new $peer({ host: '52.60.226.39', port: 4000, ssl: false }),
+          new $peer({ host: '52.60.223.205', port: 4000, ssl: false }),
+          new $peer({ host: '176.34.156.16', port: 4000, ssl: false }),
+          new $peer({ host: '54.154.120.195', port: 4000, ssl: false }),
+          new $peer({ host: '54.93.33.249', port: 4000, ssl: false })
         ]
       }
 
