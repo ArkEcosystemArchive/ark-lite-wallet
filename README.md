@@ -7,6 +7,21 @@ https://arkecosystem.github.io/ark-lite-wallet/app
 
 ## Development
 
+We recommend to use yarn https://yarnpkg.com/en/
+
+With yarn
+
+```
+git clone https://github.com/ArkEcosystem/ark-lite-wallet
+cd ark-lite-wallet
+yarn
+cd src
+yarn
+yarn dev
+```
+
+With npm
+
 ```
 git clone https://github.com/ArkEcosystem/ark-lite-wallet
 cd ark-lite-wallet
