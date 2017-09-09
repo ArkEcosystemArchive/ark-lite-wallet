@@ -7,6 +7,11 @@ https://arkecosystem.github.io/ark-lite-wallet/app
 
 ## Development
 
+Start developing with Docker and Docker Compose https://docs.docker.com/compose/install/
+```
+docker-compose up
+```
+
 ```
 git clone https://github.com/ArkEcosystem/ark-lite-wallet
 cd ark-lite-wallet
