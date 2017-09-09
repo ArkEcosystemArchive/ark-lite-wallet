@@ -3,20 +3,22 @@ md-content(layout='column')
   md-content(layout-gt-xs='row')
     md-card.address.offline-hide(flex-gt-xs=100)
       md-card-content(layout='column', layout-align='center center')
-        span.md-title.title Address
+        span.md-title.title-address Address
         .address.value {{ $ctrl.account.address }}
 
   md-content(layout='column', layout-gt-xs='row')
     md-card.peer(flex-gt-xs=50)
-      md-card-content(layout='column', layout-align='center center')
-        span.status
-          i.material-icons.offline(ng-show='!$ctrl.$peers.online') error
-          i.material-icons.online(ng-show='$ctrl.$peers.online') check circle
+      md-card-content(layout='row', layout-align='center center')
         span.md-title.title Peer
+        div(flex)
         md-select(ng-model='$ctrl.$peers.active', aria-label='Peer')
           md-optgroup(ng-repeat='(name, peers) in $ctrl.$peers.stack', ng-if='peers.length', label='{{ name }}')
             md-option(ng-repeat='peer in peers', ng-value='peer') {{ peer.host }}
+        span.status
+          i.material-icons.offline(ng-show='!$ctrl.$peers.online') error
+          i.material-icons.online(ng-show='$ctrl.$peers.online') &#xE5CA;
     md-card.offline-hide(flex-gt-xs=50)
-      md-card-content(layout='column', layout-align='center center')
+      md-card-content(layout='row', layout-align='center center')
         span.md-title.title Balance
+        div(flex)
         lsk.balance.value(amount='$ctrl.account.balance', nocolor, append)
