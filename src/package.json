@@ -12,7 +12,7 @@
     "angular-messages": "^1.5.8",
     "bitcore-mnemonic": "^1.1.1",
     "debug": "^2.2.0",
-    "jquery": "^2.2.4",
+    "jquery": "^3.0.0",
     "arkjs": "git://github.com/ArkEcosystem/ark-js#mainnet",
     "lodash": "^4.16.4",
     "moment": "^2.15.1",
