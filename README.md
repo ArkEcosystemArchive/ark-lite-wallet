@@ -1,4 +1,3 @@
-
 # Ark Lite Wallet
 
 ## Self Hosted on Github
@@ -45,6 +44,10 @@ npm run build
 ```
 
 Open ../app/index.html
+
+## Security
+
+If you discover a security vulnerability within this project, please send an e-mail to security@ark.io. All security vulnerabilities will be promptly addressed.
 
 ## Authors
 
